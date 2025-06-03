@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Upload Quiz JSON</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <h1>Generate Yoga Quiz XMLs</h1>
+    <form action="{{ url_for('generate_xmls') }}" method="post" enctype="multipart/form-data">
+      <label for="quiz_json">Upload JSON file:</label>
+      <input type="file" name="quiz_json" id="quiz_json" accept=".json" required />
+
+      <label for="base_name">Base filename (e.g. "PregnancyYogaQuiz"):</label>
+      <input type="text" name="base_name" id="base_name" required />
+
+      <button type="submit">Generate &amp; Download ZIP</button>
+    </form>
+  </body>
+</html>
