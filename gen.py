@@ -1,0 +1,268 @@
+import json
+id=""
+xml_template = """<?xml version="1.0" encoding="utf-8"?>
+<wpProQuiz>
+  <header version="0.29" exportVersion="1" ld_version="4.15.1" LEARNDASH_SETTINGS_DB_VERSION="2.5"/>
+  <data>
+    <quiz>
+      <title titleHidden="true"><![CDATA[{{TITLE}}]]></title>
+      <text><![CDATA[ AAZZAAZZ]]></text>
+      <resultText gradeEnabled="true">
+        <text prozent="0"><![CDATA[]]></text>
+      </resultText>
+      <btnRestartQuizHidden>false</btnRestartQuizHidden>
+      <btnViewQuestionHidden>false</btnViewQuestionHidden>
+      <questionRandom>false</questionRandom>
+      <answerRandom>false</answerRandom>
+      <timeLimit>0</timeLimit>
+      <showPoints>false</showPoints>
+      <statistic activated="true" ipLock="0"/>
+      <quizRunOnce type="0" cookie="false" time="0">false</quizRunOnce>
+      <numberedAnswer>false</numberedAnswer>
+      <hideAnswerMessageBox>false</hideAnswerMessageBox>
+      <disabledAnswerMark>false</disabledAnswerMark>
+      <showMaxQuestion showMaxQuestionValue="0" showMaxQuestionPercent="false">false</showMaxQuestion>
+      <toplist activated="false">
+        <toplistDataAddPermissions>1</toplistDataAddPermissions>
+        <toplistDataSort>1</toplistDataSort>
+        <toplistDataAddMultiple>false</toplistDataAddMultiple>
+        <toplistDataAddBlock>0</toplistDataAddBlock>
+        <toplistDataShowLimit>0</toplistDataShowLimit>
+        <toplistDataShowIn>0</toplistDataShowIn>
+        <toplistDataCaptcha>false</toplistDataCaptcha>
+        <toplistDataAddAutomatic>false</toplistDataAddAutomatic>
+      </toplist>
+      <showAverageResult>false</showAverageResult>
+      <prerequisite>false</prerequisite>
+      <showReviewQuestion>false</showReviewQuestion>
+      <quizSummaryHide>true</quizSummaryHide>
+      <skipQuestionDisabled>true</skipQuestionDisabled>
+      <emailNotification>0</emailNotification>
+      <userEmailNotification>false</userEmailNotification>
+      <showCategoryScore>false</showCategoryScore>
+      <hideResultCorrectQuestion>false</hideResultCorrectQuestion>
+      <hideResultQuizTime>false</hideResultQuizTime>
+      <hideResultPoints>false</hideResultPoints>
+      <autostart>false</autostart>
+      <forcingQuestionSolve>false</forcingQuestionSolve>
+      <hideQuestionPositionOverview>true</hideQuestionPositionOverview>
+      <hideQuestionNumbering>true</hideQuestionNumbering>
+      <sortCategories>false</sortCategories>
+      <showCategory>false</showCategory>
+      <quizModus questionsPerPage="0">0</quizModus>
+      <startOnlyRegisteredUser>false</startOnlyRegisteredUser>
+      <forms activated="false" position="0"/>
+      <questions>
+        <question answerType="single">
+          <title><![CDATA[Question 1]]></title>
+          <points>1</points>
+          <questionText><![CDATA[<strong>1. {{QUESTION_1}}</strong>]]></questionText>
+          <correctMsg><![CDATA[]]></correctMsg>
+          <incorrectMsg><![CDATA[]]></incorrectMsg>
+          <tipMsg enabled="false"><![CDATA[]]></tipMsg>
+          <category/>
+          <correctSameText>false</correctSameText>
+          <showPointsInBox>false</showPointsInBox>
+          <answerPointsActivated>false</answerPointsActivated>
+          <answerPointsDiffModusActivated>false</answerPointsDiffModusActivated>
+          <disableCorrect>false</disableCorrect>
+          <answers>
+            <answer points="0" correct="{{Option_11}}">
+              <answerText html="false"><![CDATA[{{ANSWER_1A}}]]></answerText>
+              <stortText html="false"><![CDATA[]]></stortText>
+            </answer>
+            <answer points="0" correct="{{Option_12}}">
+              <answerText html="false"><![CDATA[{{ANSWER_1B}}]]></answerText>
+              <stortText html="false"><![CDATA[]]></stortText>
+            </answer>
+            <answer points="0" correct="{{Option_13}}">
+              <answerText html="false"><![CDATA[{{ANSWER_1C}}]]></answerText>
+              <stortText html="false"><![CDATA[]]></stortText>
+            </answer>
+            <answer points="0" correct="{{Option_14}}">
+              <answerText html="false"><![CDATA[{{ANSWER_1D}}]]></answerText>
+              <stortText html="false"><![CDATA[]]></stortText>
+            </answer>
+          </answers>
+        </question>
+        <question answerType="single">
+          <title><![CDATA[Question 2]]></title>
+          <points>1</points>
+          <questionText><![CDATA[<strong>2. {{QUESTION_2}}</strong>&nbsp;]]></questionText>
+          <correctMsg><![CDATA[]]></correctMsg>
+          <incorrectMsg><![CDATA[]]></incorrectMsg>
+          <tipMsg enabled="false"><![CDATA[]]></tipMsg>
+          <category/>
+          <correctSameText>false</correctSameText>
+          <showPointsInBox>false</showPointsInBox>
+          <answerPointsActivated>false</answerPointsActivated>
+          <answerPointsDiffModusActivated>false</answerPointsDiffModusActivated>
+          <disableCorrect>false</disableCorrect>
+          <answers>
+            <answer points="0" correct="{{Option_21}}">
+              <answerText html="false"><![CDATA[{{ANSWER_2A}}]]></answerText>
+              <stortText html="false"><![CDATA[]]></stortText>
+            </answer>
+            <answer points="0" correct="{{Option_22}}">
+              <answerText html="false"><![CDATA[{{ANSWER_2B}}]]></answerText>
+              <stortText html="false"><![CDATA[]]></stortText>
+            </answer>
+            <answer points="0" correct="{{Option_23}}">
+              <answerText html="false"><![CDATA[{{ANSWER_2C}}]]></answerText>
+              <stortText html="false"><![CDATA[]]></stortText>
+            </answer>
+            <answer points="0" correct="{{Option_24}}">
+              <answerText html="false"><![CDATA[{{ANSWER_2D}}]]></answerText>
+              <stortText html="false"><![CDATA[]]></stortText>
+            </answer>
+          </answers>
+        </question>
+        <question answerType="single">
+          <title><![CDATA[Question 3]]></title>
+          <points>1</points>
+          <questionText><![CDATA[<strong>3. {{QUESTION_3}}</strong>&nbsp;]]></questionText>
+          <correctMsg><![CDATA[]]></correctMsg>
+          <incorrectMsg><![CDATA[]]></incorrectMsg>
+          <tipMsg enabled="false"><![CDATA[]]></tipMsg>
+          <category/>
+          <correctSameText>false</correctSameText>
+          <showPointsInBox>false</showPointsInBox>
+          <answerPointsActivated>false</answerPointsActivated>
+          <answerPointsDiffModusActivated>false</answerPointsDiffModusActivated>
+          <disableCorrect>false</disableCorrect>
+          <answers>
+            <answer points="0" correct="{{Option_31}}">
+              <answerText html="false"><![CDATA[{{ANSWER_3A}}]]></answerText>
+              <stortText html="false"><![CDATA[]]></stortText>
+            </answer>
+            <answer points="0" correct="{{Option_32}}">
+              <answerText html="false"><![CDATA[{{ANSWER_3B}}]]></answerText>
+              <stortText html="false"><![CDATA[]]></stortText>
+            </answer>
+            <answer points="0" correct="{{Option_33}}">
+              <answerText html="false"><![CDATA[{{ANSWER_3C}}]]></answerText>
+              <stortText html="false"><![CDATA[]]></stortText>
+            </answer>
+            <answer points="0" correct="{{Option_34}}">
+              <answerText html="false"><![CDATA[{{ANSWER_3D}}]]></answerText>
+              <stortText html="false"><![CDATA[]]></stortText>
+            </answer>
+          </answers>
+        </question>
+        <question answerType="single">
+          <title><![CDATA[Question 4]]></title>
+          <points>1</points>
+          <questionText><![CDATA[<strong>4. {{QUESTION_4}}</strong>&nbsp;]]></questionText>
+          <correctMsg><![CDATA[]]></correctMsg>
+          <incorrectMsg><![CDATA[]]></incorrectMsg>
+          <tipMsg enabled="false"><![CDATA[]]></tipMsg>
+          <category/>
+          <correctSameText>false</correctSameText>
+          <showPointsInBox>false</showPointsInBox>
+          <answerPointsActivated>false</answerPointsActivated>
+          <answerPointsDiffModusActivated>false</answerPointsDiffModusActivated>
+          <disableCorrect>false</disableCorrect>
+          <answers>
+            <answer points="0" correct="{{Option_41}}">
+              <answerText html="false"><![CDATA[{{ANSWER_4A}}]]></answerText>
+              <stortText html="false"><![CDATA[]]></stortText>
+            </answer>
+            <answer points="0" correct="{{Option_42}}">
+              <answerText html="false"><![CDATA[{{ANSWER_4B}}]]></answerText>
+              <stortText html="false"><![CDATA[]]></stortText>
+            </answer>
+            <answer points="0" correct="{{Option_43}}">
+              <answerText html="false"><![CDATA[{{ANSWER_4C}}]]></answerText>
+              <stortText html="false"><![CDATA[]]></stortText>
+            </answer>
+            <answer points="0" correct="{{Option_44}}">
+              <answerText html="false"><![CDATA[{{ANSWER_4D}}]]></answerText>
+              <stortText html="false"><![CDATA[]]></stortText>
+            </answer>
+          </answers>
+        </question>
+        <question answerType="single">
+          <title><![CDATA[Question 5]]></title>
+          <points>1</points>
+          <questionText><![CDATA[<strong>5. {{QUESTION_5}}</strong>&nbsp;]]></questionText>
+          <correctMsg><![CDATA[]]></correctMsg>
+          <incorrectMsg><![CDATA[]]></incorrectMsg>
+          <tipMsg enabled="false"><![CDATA[]]></tipMsg>
+          <category/>
+          <correctSameText>false</correctSameText>
+          <showPointsInBox>false</showPointsInBox>
+          <answerPointsActivated>false</answerPointsActivated>
+          <answerPointsDiffModusActivated>false</answerPointsDiffModusActivated>
+          <disableCorrect>false</disableCorrect>
+          <answers>
+            <answer points="0" correct="{{Option_51}}">
+              <answerText html="false"><![CDATA[{{ANSWER_5A}}]]></answerText>
+              <stortText html="false"><![CDATA[]]></stortText>
+            </answer>
+            <answer points="0" correct="{{Option_52}}">
+              <answerText html="false"><![CDATA[{{ANSWER_5B}}]]></answerText>
+              <stortText html="false"><![CDATA[]]></stortText>
+            </answer>
+            <answer points="0" correct="{{Option_53}}">
+              <answerText html="false"><![CDATA[{{ANSWER_5C}}]]></answerText>
+              <stortText html="false"><![CDATA[]]></stortText>
+            </answer>
+            <answer points="0" correct="{{Option_54}}">
+              <answerText html="false"><![CDATA[{{ANSWER_5D}}]]></answerText>
+              <stortText html="false"><![CDATA[]]></stortText>
+            </answer>
+          </answers>
+        </question>
+      </questions>
+      <post>
+        <post_title><![CDATA[{{TITLE}}]]></post_title>
+        <post_content><![CDATA[]]></post_content>
+      </post>
+      <post_meta>
+        <meta_key><![CDATA[_timeLimitCookie]]></meta_key>
+        <meta_value><![CDATA[["0"]]]></meta_value>
+      </post_meta>
+      <post_meta>
+        <meta_key><![CDATA[_viewProfileStatistics]]></meta_key>
+        <meta_value><![CDATA[["1"]]]></meta_value>
+      </post_meta>
+      <post_meta>
+        <meta_key><![CDATA[_sfwd-quiz]]></meta_key>
+        <meta_value><![CDATA[[{"0":"","sfwd-quiz_quiz_pro":"""  
+
+meta_block = """{{ID}},"sfwd-quiz_course_short_description":"","sfwd-quiz_lesson_schedule":"","sfwd-quiz_visible_after":"","sfwd-quiz_visible_after_specific_date":"","sfwd-quiz_external":"","sfwd-quiz_external_type":"virtual","sfwd-quiz_external_require_attendance":"","sfwd-quiz_startOnlyRegisteredUser":false,"sfwd-quiz_prerequisiteList":"","sfwd-quiz_prerequisite":"","sfwd-quiz_retry_restrictions":"","sfwd-quiz_quiz_resume":false,"sfwd-quiz_quiz_resume_cookie_send_timer":20,"sfwd-quiz_repeats":"","sfwd-quiz_quizRunOnceType":"","sfwd-quiz_quizRunOnceCookie":"","sfwd-quiz_passingpercentage":"80","sfwd-quiz_certificate":"","sfwd-quiz_threshold":"","sfwd-quiz_quiz_time_limit_enabled":"","sfwd-quiz_timeLimit":0,"sfwd-quiz_forcingQuestionSolve":false,"sfwd-quiz_quizRunOnce":false,"sfwd-quiz_quiz_materials_enabled":"","sfwd-quiz_quiz_materials":"","sfwd-quiz_custom_sorting":"","sfwd-quiz_autostart":false,"sfwd-quiz_showReviewQuestion":false,"sfwd-quiz_quizSummaryHide":true,"sfwd-quiz_skipQuestionDisabled":true,"sfwd-quiz_sortCategories":false,"sfwd-quiz_questionRandom":"","sfwd-quiz_showMaxQuestion":"","sfwd-quiz_showMaxQuestionValue":"","sfwd-quiz_showPoints":false,"sfwd-quiz_showCategory":false,"sfwd-quiz_hideQuestionPositionOverview":true,"sfwd-quiz_hideQuestionNumbering":true,"sfwd-quiz_numberedAnswer":false,"sfwd-quiz_answerRandom":false,"sfwd-quiz_quizModus":0,"sfwd-quiz_quizModus_multiple_questionsPerPage":0,"sfwd-quiz_quizModus_single_back_button":"","sfwd-quiz_quizModus_single_feedback":"end","sfwd-quiz_titleHidden":true,"sfwd-quiz_custom_question_elements":"","sfwd-quiz_resultGradeEnabled":false,"sfwd-quiz_resultText":"","sfwd-quiz_btnRestartQuizHidden":false,"sfwd-quiz_showAverageResult":"","sfwd-quiz_showCategoryScore":"","sfwd-quiz_hideResultPoints":false,"sfwd-quiz_hideResultCorrectQuestion":false,"sfwd-quiz_hideResultQuizTime":false,"sfwd-quiz_hideAnswerMessageBox":false,"sfwd-quiz_disabledAnswerMark":false,"sfwd-quiz_btnViewQuestionHidden":false,"sfwd-quiz_custom_answer_feedback":"on","sfwd-quiz_custom_result_data_display":"on","sfwd-quiz_associated_settings_enabled":"","sfwd-quiz_toplistDataShowIn_enabled":"","sfwd-quiz_statisticsIpLock_enabled":"","sfwd-quiz_formActivated":false,"sfwd-quiz_formShowPosition":"0","sfwd-quiz_toplistDataAddPermissions":"1","sfwd-quiz_toplistDataAddMultiple":false,"sfwd-quiz_toplistDataAddBlock":0,"sfwd-quiz_toplistDataAddAutomatic":false,"sfwd-quiz_toplistDataShowLimit":0,"sfwd-quiz_toplistDataSort":"1","sfwd-quiz_toplistActivated":false,"sfwd-quiz_toplistDataShowIn":0,"sfwd-quiz_toplistDataCaptcha":false,"sfwd-quiz_statisticsOn":true,"sfwd-quiz_viewProfileStatistics":true,"sfwd-quiz_statisticsIpLock":0,"sfwd-quiz_email_enabled":"","sfwd-quiz_email_enabled_admin":"","sfwd-quiz_emailNotification":0,"sfwd-quiz_userEmailNotification":false,"sfwd-quiz_timeLimitCookie_enabled":"","sfwd-quiz_timeLimitCookie":"","sfwd-quiz_templates_enabled":"","sfwd-quiz_custom_fields_forms":"","sfwd-quiz_advanced_settings":""}]]></meta_value>
+      </post_meta>
+    </quiz>
+  </data>
+</wpProQuiz>"""
+
+def markRight(quiz_content, qnum, optionNo):
+    
+    for i in range(1, 5):  
+        correct_value = "true" if i == optionNo + 1 else "false"
+        placeholder = f"{{{{Option_{qnum}{i}}}}}"  
+        quiz_content = quiz_content.replace(placeholder, correct_value)
+    return quiz_content
+
+
+with open("quiz_data.json", "r", encoding="utf-8") as f:
+    data = json.load(f)
+
+for idx, quiz in enumerate(data["quizzes"]):
+    quiz_content = xml_template
+    quiz_content = quiz_content.replace("{{TITLE}}",quiz["TITLE"])
+    id=str(quiz["id"])
+
+    for qnum, q in enumerate(quiz["QUESTIONS"], 1):
+        quiz_content = quiz_content.replace(f"{{{{QUESTION_{qnum}}}}}", q["QUESTION"])
+        for anum, answer in enumerate(q["ANSWERS"], 1):
+            quiz_content = quiz_content.replace(f"{{{{ANSWER_{qnum}{chr(64+anum)}}}}}", answer)
+       
+        quiz_content=markRight(quiz_content,qnum,q["CORRECT"])    
+
+    meta_block=meta_block.replace("{{ID}}", id)
+
+    with open(f"Pregnancy Yoga Quiz_{idx+1+92}.xml", "w", encoding="utf-8") as out_file:
+        out_file.write(quiz_content+meta_block)
+
+
