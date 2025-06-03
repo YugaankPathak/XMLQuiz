@@ -2,7 +2,7 @@ import io
 import os
 import json
 import zipfile
-from flask import Flask, request, render_template, send_file, abort
+from flask import Flask, request, render_template, send_file, abort, send_from_directory
 
 app = Flask(__name__)
 
@@ -28,6 +28,9 @@ def markRight(quiz_content: str, qnum: int, optionNo: int) -> str:
 def upload_page():
     return render_template("upload.html")
 
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory('static', 'favicon.ico')
 
 @app.route("/generate_xmls", methods=["POST"])
 def generate_xmls():
